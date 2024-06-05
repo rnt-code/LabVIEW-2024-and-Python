@@ -1,7 +1,8 @@
-from find_consecutive_close_values_with_a_reference import *
 from load_time_series import *
+from find_consecutive_close_values_with_a_reference import *
 
-csv_file_path = 'C:/Users/Taboada.r248/Documents/LabVIEW Projects/LabVIEW-2024 & Python/csv data/low-1.csv'
+csv_file_path = 'D:/LabVIEW/LabVIEW-2024-and-Python/csv_data/low-1.csv'
+# csv_file_path = 'C:/Users/Taboada.r248/Documents/LabVIEW Projects/LabVIEW-2024 & Python/csv_data/low-1.csv'
 
 result = load_time_series(csv_file_path)
 data, source, status, code = result
