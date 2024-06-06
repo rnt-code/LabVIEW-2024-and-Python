@@ -16,15 +16,8 @@ def find_close_values_w_ref(data, reference, tolerance):
         data = np.asarray(data)
         threshold = tolerance * reference / 100
 
-        # Identifies 'data' indices that meet the proximity to the reference based on tolerance
-        # np.where(condition, [x,y]/) return indices (of 'data') when only condition is provided
-        # np.where return a tuple of arrays, close_data_indices_all is a tuple
-
         # close_data_indices is the first element of the array tuple of np.where(np.abs(data - reference) <= threshold), thus [0]
         close_data_indices = np.where(np.abs(data - reference) <= threshold)[0]
-
-        if close_data_indices.size == 0:
-            return np.zeros_like(data), 0, [0], 0, False, "No close data found."
 
         # Group consecutive indices. splits es un ndarray de booleanos con el resultado de comparar a[i+1] - a[i] con 1.
         # Si la diferencia es distinta de 1, True, si es 1, False. Las False => índices consecutivos.
@@ -47,7 +40,10 @@ def find_close_values_w_ref(data, reference, tolerance):
         close_values = close_values_w_zero[close_values_w_zero != 0]
         
         # Mean of element found
-        average = np.mean(close_values)
+        if close_values.size > 0:  # Verifica si el ndarray no está vacío
+            average = np.mean(close_values)
+        else:
+            average = -1
 
         # Calculate the number of elements in the longest series
         num_elements_found = len(largest_group_index)
@@ -55,4 +51,4 @@ def find_close_values_w_ref(data, reference, tolerance):
         return close_values_w_zero, num_elements_found, close_values, average, False, "Success"
     
     except Exception as e:
-        return np.zeros_like(data), 0, [0], 0, True, str(e)
+        return np.zeros_like(data), 0, [0], -1, True, str(e)

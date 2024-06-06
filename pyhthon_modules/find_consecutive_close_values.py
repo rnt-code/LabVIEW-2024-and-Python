@@ -1,8 +1,6 @@
 import numpy as np
 
 def find_close_values(data, tolerance=0.01, min_threshold=10):
-    if not data:
-        return np.array([0]), 0, np.array([0])
     
     data = np.asarray(data, dtype=float)
     
@@ -51,15 +49,18 @@ def find_close_values(data, tolerance=0.01, min_threshold=10):
         close_values_end_index = len(data) - 1
 
     # Construimos el resultado con el grupo mayoritario y los ceros en otras posiciones
-    close_values_w_zero = np.zeros_like(data)
+    close_values_w_zeros = np.zeros_like(data)
     if close_values:
         for i in range(close_values_start_index, close_values_end_index + 1):
-            close_values_w_zero[i] = data[i]
+            close_values_w_zeros[i] = data[i]
 
     close_values = np.array(close_values)
     num_elements_found = close_values.size
 
     # Calculamos el valor promedio del grupo mayoritario
-    average = np.mean(close_values)
+    if close_values.size > 0:  # Verifica si el ndarray no está vacío
+        average = np.mean(close_values)
+    else:
+        average = -1
 
-    return close_values_w_zero, num_elements_found, close_values, average
+    return close_values_w_zeros, num_elements_found, close_values, average
