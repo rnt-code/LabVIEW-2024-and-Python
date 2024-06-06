@@ -31,13 +31,13 @@ def find_close_values_w_ref(data, reference, tolerance):
         largest_group_index = max(groups, key=len)
 
         # Create an array (filled with zeroes) to hold the close data series
-        close_values_w_zero = np.zeros_like(data, dtype=float)
+        close_values_w_zeros = np.zeros_like(data, dtype=float)
 
-        # fill close_values_w_zero with cosecutive values of data with consecutive indices.
-        close_values_w_zero[largest_group_index] = data[largest_group_index]
+        # fill close_values_w_zeros with cosecutive values of data with consecutive indices.
+        close_values_w_zeros[largest_group_index] = data[largest_group_index]
 
         # Extract the close values in a separate array (excluding zeros)
-        close_values = close_values_w_zero[close_values_w_zero != 0]
+        close_values = close_values_w_zeros[close_values_w_zeros != 0]
         
         # Mean of element found
         if close_values.size > 0:  # Verifica si el ndarray no está vacío
@@ -48,7 +48,7 @@ def find_close_values_w_ref(data, reference, tolerance):
         # Calculate the number of elements in the longest series
         num_elements_found = len(largest_group_index)
 
-        return close_values_w_zero, num_elements_found, close_values, average, False, "Success"
+        return close_values_w_zeros, num_elements_found, close_values, average, False, "Success"
     
     except Exception as e:
         return np.zeros_like(data), 0, [0], -1, True, str(e)
