@@ -1,6 +1,6 @@
 import numpy as np
 
-def find_close_values(data, tolerance=0.01, min_threshold=10):
+def find_close_values(data, tolerance, min_threshold):
     
     data = np.asarray(data, dtype=float)
     

@@ -21,8 +21,9 @@
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="prueba.vi" Type="VI" URL="../prueba.vi"/>
-		<Item Name="test_find_close_data_with_a_reference.vi" Type="VI" URL="../test_find_close_data_with_a_reference.vi"/>
-		<Item Name="test_find_consecutive_close_values.vi" Type="VI" URL="../test_find_consecutive_close_values.vi"/>
+		<Item Name="prueba2.vi" Type="VI" URL="../prueba2.vi"/>
+		<Item Name="test_find_consecutive_close_data.vi" Type="VI" URL="../test_find_consecutive_close_data.vi"/>
+		<Item Name="test_find_consecutive_close_data_with_a_reference.vi" Type="VI" URL="../test_find_consecutive_close_data_with_a_reference.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Application Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Application Directory.vi"/>
