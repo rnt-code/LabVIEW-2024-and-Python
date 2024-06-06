@@ -20,6 +20,7 @@
 		<Item Name="pyhthon_modules" Type="Folder" URL="../pyhthon_modules">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
+		<Item Name="prueba.vi" Type="VI" URL="../prueba.vi"/>
 		<Item Name="test_find_close_data_with_a_reference.vi" Type="VI" URL="../test_find_close_data_with_a_reference.vi"/>
 		<Item Name="test_find_consecutive_close_values.vi" Type="VI" URL="../test_find_consecutive_close_values.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
