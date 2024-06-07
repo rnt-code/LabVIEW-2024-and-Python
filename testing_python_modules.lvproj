@@ -20,6 +20,10 @@
 		<Item Name="pyhthon_modules" Type="Folder" URL="../pyhthon_modules">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
+		<Item Name="qsm support" Type="Folder" URL="../qsm support">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
+		<Item Name="main_qsm.vi" Type="VI" URL="../main_qsm.vi"/>
 		<Item Name="prueba.vi" Type="VI" URL="../prueba.vi"/>
 		<Item Name="test_find_consecutive_close_values.vi" Type="VI" URL="../test_find_consecutive_close_values.vi"/>
 		<Item Name="test_find_consecutive_close_values_with_a_reference.vi" Type="VI" URL="../test_find_consecutive_close_values_with_a_reference.vi"/>
