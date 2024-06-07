@@ -1,8 +1,8 @@
 from load_time_series import *
 from find_consecutive_close_values import *
 
-base_path = 'D:/LabVIEW/LabVIEW-2024-and-Python/csv_data/'
-# base_path = 'C:/Users/Taboada.r248/Documents/LabVIEW Projects/LabVIEW-2024-and-Python/csv_data/'
+# base_path = 'D:/LabVIEW/LabVIEW-2024-and-Python/csv_data/'
+base_path = 'C:/Users/Taboada.r248/Documents/LabVIEW Projects/LabVIEW-2024-and-Python/csv_data/'
 file_name = 'low-1.csv'
 
 csv_file_path = base_path + file_name
