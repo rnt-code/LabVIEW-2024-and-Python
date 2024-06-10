@@ -20,7 +20,6 @@
 		<Item Name="pyhthon_modules" Type="Folder" URL="../pyhthon_modules">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="QMH" Type="Folder"/>
 		<Item Name="qsm support" Type="Folder" URL="../qsm support">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
